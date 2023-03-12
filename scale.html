@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+table , th{
+    
+       border: 2px solid black;
+        padding: 10px;
+        background-color:hsla(9, 100%, 64%, 0.5)
+
+}
+th,input{
+    padding:10px;
+   width:200px;
+}
+h1{
+      border-top: 0cap;
+      border: 2px solid yellow;
+      text-align: center;
+       background-color: pink;
+}
+</style>
+<h1>Booking appointment App<h1>
+<table style="width:100%">
+<form onsubmit="savetoLocalstorage(event)">
+ <th> <label for="username">Name:</label></th>
+<tr> <th> <input type="text"  name="username" required></th></tr>
+<th><label for="email">E-mail:</label></th><tr>
+<tr><th><input type="text" id="email" name="email" required></th><tr>
+<tr><th><label for ='phone-number'>Mobile No:</label></th></tr>
+<th><input type='tel'name="Mobile No" required><br><br>
+<input type="submit" value="Submit"></th>
+</form>
+</table>
+ <script type="text/javascript">
+
+function savetoLocalstorage(event) {
+  event.prevent.Default();
+  const name=event.target.username.value;
+const Email=event.target.email.value;
+const phonenumber=event.target.phone-number.value;
+localStorage.setItem('Name',Name);
+localStorage.setItem('Email', EMAIL);
+localStorage.setItem('Phonenumber',phonenumber);
+}
+ </script>
+</body>
+</html>
